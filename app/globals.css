@@ -1,0 +1,105 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* KaLerato Holdings Design System - Digital Billboard Company */
+
+@layer base {
+  :root {
+    /* Brand Colors - KaLerato Holdings */
+    --background: 220 45% 6%; /* #090c11 - Deep dark background */
+    --foreground: 0 0% 100%; /* #ffffff - Pure white text */
+
+    --card: 220 40% 8%; /* Slightly lighter dark for cards */
+    --card-foreground: 0 0% 100%;
+
+    --popover: 220 45% 6%;
+    --popover-foreground: 0 0% 100%;
+
+    /* Primary Brand Pink */
+    --primary: 340 88% 61%; /* #f43467 - KaLerato brand pink */
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 340 88% 71%; /* Lighter pink for effects */
+
+    /* Secondary grays for UI elements */
+    --secondary: 220 20% 15%;
+    --secondary-foreground: 0 0% 90%;
+
+    --muted: 220 15% 12%;
+    --muted-foreground: 0 0% 70%;
+
+    --accent: 340 88% 61%; /* Same as primary for consistency */
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 20% 20%;
+    --input: 220 20% 15%;
+    --ring: 340 88% 61%; /* Pink focus rings */
+
+    --radius: 0.75rem;
+
+    /* Custom Design Tokens */
+    --gradient-primary: linear-gradient(135deg, hsl(340 88% 61%), hsl(340 88% 71%));
+    --gradient-dark: linear-gradient(180deg, hsl(220 45% 6%), hsl(220 40% 8%));
+    --gradient-hero: linear-gradient(135deg, hsl(220 45% 6% / 0.95), hsl(340 88% 61% / 0.1));
+    
+    --shadow-primary: 0 10px 40px hsl(340 88% 61% / 0.3);
+    --shadow-card: 0 4px 20px hsl(220 45% 6% / 0.4);
+    --shadow-glow: 0 0 30px hsl(340 88% 61% / 0.5);
+
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    /* Typography Scale */
+    --font-size-hero: 3.5rem;
+    --font-size-heading: 2.5rem;
+    --font-size-subheading: 1.5rem;
+    --font-size-body: 1rem;
+    --font-size-small: 0.875rem;
+
+    /* Spacing Scale */
+    --spacing-hero: 8rem;
+    --spacing-section: 6rem;
+    --spacing-card: 2rem;
+  }
+
+  .dark {
+    /* Dark mode inherits the same values */
+    --background: 220 45% 6%;
+    --foreground: 0 0% 100%;
+    --card: 220 40% 8%;
+    --card-foreground: 0 0% 100%;
+    --popover: 220 45% 6%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 340 88% 61%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 220 20% 15%;
+    --secondary-foreground: 0 0% 90%;
+    --muted: 220 15% 12%;
+    --muted-foreground: 0 0% 70%;
+    --accent: 340 88% 61%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 220 20% 20%;
+    --input: 220 20% 15%;
+    --ring: 340 88% 61%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-inter), system-ui, sans-serif;
+  }
+
+  .font-display {
+    font-family: var(--font-space-grotesk), var(--font-inter), system-ui, sans-serif;
+  }
+}
